@@ -1,0 +1,56 @@
+{
+    "name": "template-string-replace",
+    "displayName": "template-string-replace",
+    "description": "Replace some characters in a regular string with variables/expressions and return a template string (ES6)",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wzh23wzh/template-string-replace.git"
+    },
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "template-string-replace.tsReplace",
+                "title": "template-string-replace"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "yarn run compile && yarn run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/babel__core": "^7.20.1",
+        "@types/babel__generator": "^7.6.4",
+        "@types/babel__traverse": "^7.20.1",
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "20.2.5",
+        "@types/vscode": "^1.54.0",
+        "@typescript-eslint/eslint-plugin": "^5.59.8",
+        "@typescript-eslint/parser": "^5.59.8",
+        "@vscode/test-electron": "^2.3.2",
+        "eslint": "^8.41.0",
+        "glob": "^8.1.0",
+        "mocha": "^10.2.0",
+        "typescript": "^5.1.3"
+    },
+    "dependencies": {
+        "@babel/core": "^7.22.5",
+        "@babel/generator": "^7.22.5",
+        "@babel/parser": "^7.22.5",
+        "@babel/traverse": "^7.22.5"
+    }
+}

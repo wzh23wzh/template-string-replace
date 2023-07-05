@@ -2,7 +2,8 @@
     "name": "template-string-replace",
     "displayName": "template-string-replace",
     "description": "Replace some characters in a regular string with variables/expressions and return a template string (ES6)",
-    "version": "0.0.1",
+    "version": "0.0.2",
+    "publisher": "wzh23",
     "engines": {
         "vscode": "^1.54.0"
     },

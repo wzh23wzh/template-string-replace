@@ -1,49 +1,27 @@
-Sure! Here's an example README.md file to describe the usage of your VS Code extension:
+A Visual Studio Code extension，Replace some characters in a **"string literals"** with **variables/expressions** and return a **"template string"**
 
-```
-# Template String Replace - VS Code Extension
+![demo1](./assets/demo1.gif)
 
-## Description
-Template String Replace is a VS Code extension that helps you replace specific words in template strings with variables. It allows you to easily convert string literals to template literals, making it more flexible and dynamic.
+# Example
 
-## Features
-- Replace specific words in template strings with variables.
-- Supports both StringLiteral and TemplateElement types.
-- Works with multiple occurrences of the search word within a single template string.
-- Integrates seamlessly into the VS Code editor.
+Sometimes, we need to optimize code that involves protected strings. For example, extracting a certain word from a string and replacing it with a constant, while converting the string to a template string (enclosed in backticks).
 
-## Installation
-1. Launch Visual Studio Code.
-2. Open the Extensions view by clicking on the square icon in the sidebar or by pressing `Ctrl+Shift+X`.
-3. Search for "Template String Replace" and click on the "Install" button.
-4. Once installed, the extension will be activated automatically.
-
-## Usage
-1. Open a JavaScript or TypeScript file in the editor.
-2. Select the text that you want to replace or place the cursor inside the template string.
-3. Open the Command Palette by pressing `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS).
-4. Type "Template String Replace" and select the "Replace in Template String" command.
-5. Enter the word you want to replace when prompted.
-6. Enter the replacement variable when prompted.
-7. The extension will replace all occurrences of the word within the selected text or template string with the specified variable.
-8. The modified code will be automatically updated in the editor.
-
-## Requirements
-- Visual Studio Code 1.60.0 or newer.
-
-## License
-This extension is licensed under the [MIT License](LICENSE).
-
-## Feedback and Contributions
-Feedback, bug reports, and contributions are welcome! Please feel free to [submit an issue](https://github.com/your-username/your-repo/issues) or [create a pull request](https://github.com/your-username/your-repo/pulls) on the GitHub repository.
-
-## Release Notes
-Please refer to the [Changelog](CHANGELOG.md) for information about the latest updates and releases.
-
+```ts
+const getUserInfo = 'myServiceName/user/info';
+const getUserCompanyInfo = 'myServiceName/user/companInfo';
 ```
 
-You can customize the content according to your specific extension and provide more detailed information about the features, requirements, and any other relevant information.
+I need to extract the `myServiceName` mentioned in the above code and encapsulate it as a constant.
 
-Remember to replace "your-username" and "your-repo" with your actual GitHub username and repository name if you have a repository for your extension.
+I need to quickly convert it to the following code:
 
-I hope this helps! Let me know if you need any further assistance.
+The usual approach is to search for the keyword `myServiceName` and replace it with `${MY_SERVICE}`, while also converting the string quotes from double quotes to backticks. This series of operations can be quite cumbersome.
+
+```ts
+const getUserInfo = `${MY_SERVICE}/user/info`;
+const getUserCompanyInfo = `${MY_SERVICE}/user/companInfo`;
+```
+
+Enter "template-string-replace" to the stage.
+
+Press "**Ctrl+Shift+P**," enter the plugin name: "**template-string-replace**," and press Enter. Then, enter the word you want to replace, such as "myServiceName," and press Enter. Next, enter the word you want to use for replacement and press Enter. The operation is now complete.

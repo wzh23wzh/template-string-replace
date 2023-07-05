@@ -1,6 +1,6 @@
 A Visual Studio Code extension，Replace some characters in a **"string literals"** with **variables/expressions** and return a **"template string"**
 
-![demo1](./assets/:Users:ecarx:Downloads:demo1.png)
+![demo1](./assets/example.png)
 
 # Example
 
